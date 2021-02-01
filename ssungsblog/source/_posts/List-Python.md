@@ -1,7 +1,7 @@
 ---
 title: List_Python
 date: 2021-01-28 21:13:31
-tags: List
+tags: [python][list]
 ---
 
 # 리스트

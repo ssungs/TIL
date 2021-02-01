@@ -1,8 +1,8 @@
 ---
 title: Python First
 date: 2021-01-27 12:00:28
-tags:
---
+tags:[python][string]
+---
 
 # Python
 
