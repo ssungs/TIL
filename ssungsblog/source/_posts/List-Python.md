@@ -1,7 +1,9 @@
 ---
-title: List_Python
+title: Python List
 date: 2021-01-28 21:13:31
-tags: [python][list]
+tags:
+  - Python
+  - List
 ---
 
 # 리스트
