@@ -1,0 +1,74 @@
+#2호선 지하철
+
+## 변수 지정
+
+```
+seoul_2line = ['성수','뚝섬','한양대','왕십리','상왕십리',
+                  '신당','동대문역사문화공원','을지로4가',
+                  '을지로3가','을지로입구','시청','충정로',
+                  '아현','이대','신촌','홍대입구','합정','당산',
+                  '영등포구청','문래','신도림','대림','구로디지털단지',
+                  '신대방','신림','봉천','서울대입구','낙성대','사당',
+                  '방배','서초','교대','강남','역삼','선릉','삼성', '종합운동장',
+                  '잠실새내','잠실','잠실나루','강변','구의','건대입구','성수']
+                  
+num = [i for i in range(0,44)]
+num2 = [i for i in reversed(range(0,44))]
+```
+
+## 외선 , 내선 구분
+
+```
+Out_line = {}
+for k,v in zip(num, seoul_2line):
+    Out_line[k] = v
+    
+In_line = {}
+for k,v in zip(num2, seoul_2line):
+    In_line[k] = v
+```
+    
+## 본 코드
+```
+class Subway:
+    Door_open = '문이 열립니다.'
+    Door_close = '문이 닫힙니다.'
+    Passenger = 'Get in , get out.'
+    First_station = '성수'
+    Station = seoul_2line
+    Final_station = '성수'
+    Scheduled_speed = 25 # km/h
+    Train_interval = 3 # min
+    
+    def __init__(self, name, weapon):
+        self.name = name
+        self.way = way
+        self.this_station = station
+        self.arrival = arrival
+        
+    def SubwayName(self):  # 열차 번호(name)과 이름(way)를 return
+        return print('{}번 열차는 {}열차입니다.'.format(self.name, self.way))
+        
+    def SubwayDeparture(self):  # 열차의 출발역 return
+        return print('{}역에서 열차 출발합니다.'.format(self.station))
+    
+    def ArrivalStation(self):   # 열차의 도착역과 다음 도착역 return
+        return print('다음 역은 {}역 입니다.'.format(self.arrival))
+    
+    def Stop(self):   # 정차시 속도를 줄이고 문을 열고 승객이 탄다.
+        Speed = [i for i in reversed(range(0,Scheduled_speed))]
+        print(Door_open)
+        print(Passenger)
+        
+    def Departure(self):   # 출발시 문을 닫고 속도를 높힌다.
+        print(Door_close)
+        Speed = [i for i in range(0,Scheduled_speed)]
+        
+    def Data(self):   # 열차의 정차역과 다음역을 외선,내선에 맞게 저장
+        if Out_line:
+            self.this_station = Station[stn_num]
+            self.arrival = Station[stn_num + 1]
+        elif In_line:
+            self.this_station = Station[stn_num]
+            self.arrival = Station[stn_num - 1]
+```
