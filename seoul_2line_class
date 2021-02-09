@@ -1,4 +1,4 @@
-#2호선 지하철
+# 2호선 지하철
 
 ## 변수 지정
 
@@ -72,3 +72,4 @@ class Subway:
             self.this_station = Station[stn_num]
             self.arrival = Station[stn_num - 1]
 ```
+
